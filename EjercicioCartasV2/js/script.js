@@ -117,6 +117,9 @@ function comparar(e) {
             document.body.appendChild(sonido).style.display = "none";
             $(".carta").attr("src", "imagenes/vuelta.jpg");
             $(".carta").removeClass("sombra");
+            puntuacion=0;
+            $("#puntos").val(puntuacion);
+            $("#bar").css("width", porcentajes[puntuacion] + "%");
             aleatorio();
         }, 700);
     }
@@ -187,8 +190,6 @@ function comparar(e) {
         }, 700);
     }
 };
-
-
 
 //si la página se carga con una cookie guardada usa la función
 if (localStorage.getItem('lenguaje') == 'español') {
